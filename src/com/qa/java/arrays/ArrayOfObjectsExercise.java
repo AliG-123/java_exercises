@@ -10,11 +10,10 @@ public class ArrayOfObjectsExercise {
 		products[2] = new Product(3, "Banana", 1.25, "Fruits", 4.0, 15, true);
 		products[3] = new Product(4, "Oreos", 2.00, "Sweets", 4.6, 6, true);
 		products[4] = new Product(5, "Galaxy Chocolate", 1.25, "Sweets", 4.1, 20, true);
-	
-		
+
 		String theCheapestItem = Product.cheapestProduct(products);
 		System.out.println("The cheapest discounted item is: " + theCheapestItem);
-		
+
 		String mostExpensiveItem = Product.mostExpensiveProduct(products);
 		System.out.println("The most expensive discounted item is: " + mostExpensiveItem);
 

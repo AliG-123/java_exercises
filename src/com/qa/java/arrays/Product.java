@@ -91,17 +91,17 @@ public class Product {
 		}
 		return productName;
 	}
-	
+
 	// Method to return the product with highest price
-		static String highestRated(Product[] products) {
-			double highestRating = products[0].rating;
-			String topRatedProduct = products[0].name;
-			for (Product product : products) {
-				if (product.rating > highestRating) {
-					highestRating = product.rating;
-					topRatedProduct = product.name;
-				}
+	static String highestRated(Product[] products) {
+		double highestRating = products[0].rating;
+		String topRatedProduct = products[0].name;
+		for (Product product : products) {
+			if (product.rating > highestRating) {
+				highestRating = product.rating;
+				topRatedProduct = product.name;
 			}
-			return topRatedProduct;
 		}
+		return topRatedProduct;
+	}
 }
