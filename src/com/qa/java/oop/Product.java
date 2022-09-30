@@ -45,7 +45,7 @@ public class Product {
 	
 	//method display product info
 	
-	void productInfo(){
+	public void productInfo(){
 			System.out.println("Product id: " + id);
 			System.out.println("Product name: " + name);
 			System.out.println("Product Catergory: " + category);
