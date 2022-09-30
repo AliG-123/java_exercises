@@ -67,41 +67,41 @@ public class Product {
 	}
 
 	// Method to return the product with least price
-	static String cheapestProduct(Product[] products) {
+	static Product cheapestProduct(Product[] products) {
 		double cheapestPrice = products[0].discountedPrice();
-		String productName = products[0].name;
+		Product Product = products[0];
 		for (Product product : products) {
 			if (product.discountedPrice() < cheapestPrice) {
 				cheapestPrice = product.discountedPrice();
-				productName = product.name;
+				Product = product;
 			}
 		}
-		return productName;
+		return Product;
 	}
 
 	// Method to return the product with highest price
-	static String mostExpensiveProduct(Product[] products) {
+	static Product mostExpensiveProduct(Product[] products) {
 		double highestPrice = products[0].discountedPrice();
-		String productName = products[0].name;
+		Product Products = products[0];
 		for (Product product : products) {
 			if (product.discountedPrice() > highestPrice) {
 				highestPrice = product.discountedPrice();
-				productName = product.name;
+				Products = product;
 			}
 		}
-		return productName;
+		return Products;
 	}
 
 	// Method to return the product with highest rating
-	static String highestRated(Product[] products) {
+	static Product highestRated(Product[] products) {
 		double highestRating = products[0].rating;
-		String topRatedProduct = products[0].name;
+		Product Products = products[0];
 		for (Product product : products) {
 			if (product.rating > highestRating) {
 				highestRating = product.rating;
-				topRatedProduct = product.name;
+				Products = product;
 			}
 		}
-		return topRatedProduct;
+		return Products;
 	}
 }
