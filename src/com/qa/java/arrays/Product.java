@@ -92,7 +92,7 @@ public class Product {
 		return productName;
 	}
 
-	// Method to return the product with highest price
+	// Method to return the product with highest rating
 	static String highestRated(Product[] products) {
 		double highestRating = products[0].rating;
 		String topRatedProduct = products[0].name;
