@@ -8,6 +8,7 @@ public class StringMethods {
 		return s.split(" ").length;
 	}
 
+	// Method for returning number of invalid emails
 	static int invalidEmail(String[] Emails) {
 		String regex = "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$";
 		int count = 0;
@@ -18,6 +19,8 @@ public class StringMethods {
 		}
 		return count;
 	}
+	
+	// Method for returning number of valid emails
 
 	static int validEmail(String[] Emails) {
 		String regex = "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$";
@@ -30,6 +33,7 @@ public class StringMethods {
 		return count;
 	}
 
+	// Method for returning the valid emails
 	static void validEmailsReturn(String[] Emails) {
 		String regex = "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$";
 
@@ -40,6 +44,7 @@ public class StringMethods {
 		}
 	}
 
+	// Method for returning the invalid emails
 	static void invalidEmailsReturn(String[] Emails) {
 		String regex = "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$";
 
