@@ -11,13 +11,13 @@ public class ArrayOfObjectsExercise {
 		products[3] = new Product(4, "Oreos", 2.00, "Sweets", 4.6, 6, true);
 		products[4] = new Product(5, "Galaxy Chocolate", 1.25, "Sweets", 4.1, 20, true);
 
-		Product theCheapestItem = Product.cheapestProduct(products);
+		Product theCheapestItem = ArrayMethods.cheapestProduct(products);
 		System.out.println("The cheapest discounted item is: " + theCheapestItem.name);
 
-		Product mostExpensiveItem = Product.mostExpensiveProduct(products);
+		Product mostExpensiveItem = ArrayMethods.mostExpensiveProduct(products);
 		System.out.println("The most expensive discounted item is: " + mostExpensiveItem.name);
 
-		Product highestRatedItem = Product.highestRated(products);
+		Product highestRatedItem = ArrayMethods.highestRated(products);
 		System.out.println("The highest rated item is: " + highestRatedItem.name);
 	}
 }

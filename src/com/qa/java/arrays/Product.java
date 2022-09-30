@@ -65,43 +65,5 @@ public class Product {
 		System.out.println("Shop phone number is: " + SHOP_CONTACT_NO);
 		System.out.println("Shop email is: " + SHOP_EMAIL);
 	}
-
-	// Method to return the product with least price
-	static Product cheapestProduct(Product[] products) {
-		double cheapestPrice = products[0].discountedPrice();
-		Product Product = products[0];
-		for (Product product : products) {
-			if (product.discountedPrice() < cheapestPrice) {
-				cheapestPrice = product.discountedPrice();
-				Product = product;
-			}
-		}
-		return Product;
-	}
-
-	// Method to return the product with highest price
-	static Product mostExpensiveProduct(Product[] products) {
-		double highestPrice = products[0].discountedPrice();
-		Product Products = products[0];
-		for (Product product : products) {
-			if (product.discountedPrice() > highestPrice) {
-				highestPrice = product.discountedPrice();
-				Products = product;
-			}
-		}
-		return Products;
-	}
-
-	// Method to return the product with highest rating
-	static Product highestRated(Product[] products) {
-		double highestRating = products[0].rating;
-		Product Products = products[0];
-		for (Product product : products) {
-			if (product.rating > highestRating) {
-				highestRating = product.rating;
-				Products = product;
-			}
-		}
-		return Products;
-	}
+	
 }
