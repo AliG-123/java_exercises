@@ -6,4 +6,5 @@
  *
  */
 module java_exercise {
+	requires java.sql;
 }

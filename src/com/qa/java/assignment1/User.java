@@ -12,10 +12,11 @@ public class User {
 	ArrayList<Book> favouriteBooks = new ArrayList<Book>();;
 	ArrayList<Book> completedBooks = new ArrayList<Book>();;
 
-	User(){
+	User() {
 	}
-	
-	public User(String username, String password, String emailId, ArrayList<Book> newBooks, ArrayList<Book> favouriteBooks, ArrayList<Book> completedBooks) {
+
+	public User(String username, String password, String emailId, ArrayList<Book> newBooks,
+			ArrayList<Book> favouriteBooks, ArrayList<Book> completedBooks) {
 		this.username = username;
 		this.password = password;
 		this.emailId = emailId;
@@ -33,10 +34,11 @@ public class User {
 		this.password = inp.nextLine();
 		System.out.println("Enter your email: ");
 		this.emailId = inp.nextLine();
-		newBooks.add(new Book("This is the Default Book","","",0));
-		completedBooks.add(new Book("This is the Default Book","","",0));
-		favouriteBooks.add(new Book("This is the Default Book","","",0));
+		newBooks.add(new Book("This is the Default Book", "", "", 0));
+		completedBooks.add(new Book("This is the Default Book", "", "", 0));
+		favouriteBooks.add(new Book("This is the Default Book", "", "", 0));
 	}
+
 	boolean userLogin() {
 		boolean flag = true;
 		while (flag) {
@@ -56,27 +58,30 @@ public class User {
 	}
 
 	void viewBooks(ArrayList<User> users, int inpUsername) {
-		System.out.println("Which books would you like to view: ");
 		System.out.println("1: New Books");
 		System.out.println("2: Favourite Books");
 		System.out.println("3: Completed Books");
+		System.out.println("Which books would you like to view: ");
 		int bookType = inp.nextInt();
 		boolean flag = true;
 		while (flag) {
 			switch (bookType) {
 			case 1:
+				System.out.println("These are your books: ");
 				for (Book book : users.get(inpUsername - 1).newBooks) {
 					System.out.println(book.bookName);
 				}
 				flag = false;
 				break;
 			case 2:
+				System.out.println("These are your favourite books: ");
 				for (Book book : users.get(inpUsername - 1).favouriteBooks) {
 					System.out.println(book.bookName);
 				}
 				flag = false;
 				break;
 			case 3:
+				System.out.println("These are your completed books: ");
 				for (Book book : users.get(inpUsername - 1).completedBooks) {
 					System.out.println(book.bookName);
 				}

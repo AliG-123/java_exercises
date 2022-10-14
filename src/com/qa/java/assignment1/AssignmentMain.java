@@ -11,17 +11,17 @@ public class AssignmentMain {
 		books.add(new Book("Diary of a wimpy kid", "Jeff Kinney", "Comedy, young adult fiction", 1));
 		books.add(new Book("Horrid Henry", "Francesca Simon", "Fantasy Fiction", 2));
 		books.add(new Book("Atomic Habits", "James Clear", "Self-help book", 3));
-		
+
 		ArrayList<User> users = new ArrayList<User>();
-		
-		users.add(new User( "ali","Password123",  "ali@hotmail.com", books, books, books));
-		users.add(new User( "jabril","Password123",  "jabril@hotmail.com", books, books, books));
-		users.add(new User( "david","Password123",  "david@hotmail.com", books, books, books));
-	
+
+		users.add(new User("ali", "Password123", "ali@hotmail.com", books, books, books));
+		users.add(new User("jabril", "Password123", "jabril@hotmail.com", books, books, books));
+		users.add(new User("david", "Password123", "david@hotmail.com", books, books, books));
+
 		int bookSize = books.size();
 		int userSize = users.size();
 		boolean ExitProgram = false;
-		while (ExitProgram == false){
+		while (ExitProgram == false) {
 			System.out.println("Main menu");
 			System.out.println("1: Create User");
 			System.out.println("2: Login to account");
@@ -45,15 +45,15 @@ public class AssignmentMain {
 			case 2:
 				System.out.println("Which account would you like to access: ");
 				int i = 1;
-				for (User user: users) {
+				for (User user : users) {
 					System.out.println(user.username + ": " + (i));
 					i++;
 				}
 				System.out.println("Enter number of account you want to access");
-				int inpUsername= scan.nextInt();
+				int inpUsername = scan.nextInt();
 				if (users.get(inpUsername - 1).userLogin()) {
 					System.out.println("You are now viewing account information");
-					users.get(inpUsername -1).viewBooks(users, inpUsername);
+					users.get(inpUsername - 1).viewBooks(users, inpUsername);
 				}
 				break;
 			case 3:
@@ -62,12 +62,12 @@ public class AssignmentMain {
 				break;
 			case 4:
 				System.out.println("Enter Book ID");
-				int inpBookId= scan.nextInt();
+				int inpBookId = scan.nextInt();
 				Book.searchBook(books, inpBookId);
 				break;
 			case 5:
 				System.out.println("These are all the books in the Library: ");
-				for (Book book: books) {
+				for (Book book : books) {
 					System.out.println(book.bookName);
 				}
 				break;
@@ -78,12 +78,12 @@ public class AssignmentMain {
 			default:
 				System.out.println("Invalid option");
 				break;
-			} 
+			}
 			System.out.println("Do you want to return to main menu: (y/n)");
 			String mainMenuOption = scan.next();
-			if (mainMenuOption.equals("y")){
+			if (mainMenuOption.equals("y")) {
 				continue;
-			}else {
+			} else {
 				System.out.println("Program ended");
 				ExitProgram = true;
 			}
